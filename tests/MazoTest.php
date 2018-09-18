@@ -28,4 +28,9 @@ class MazoTest extends TestCase {
         $mazo = new Mazo;
         $this->assertEquals($mazo->obtenerCantidadCartas(), 0);
     }
+    
+    public function testTieneCartas(){
+        $mazo = new Mazo;
+        $this->assertFalse($mazo->tieneCartas());
+    }
 }
