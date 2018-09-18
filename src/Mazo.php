@@ -26,7 +26,10 @@ class Mazo {
   }
   
   public function agregarCarta($carta){
-    if($this->cartas = array_push($this->cartas, $carta)) return TRUE;
+    if($this->cartas = array_push($this->cartas, $carta)) {
+      $this->cantidad_cartas++;
+      return TRUE;
+    }
     return FALSE;
   }
   
