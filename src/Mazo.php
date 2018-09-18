@@ -13,4 +13,8 @@ class Mazo {
   public function cortar() {
     return TRUE;
   }
+  
+  public function obtenerCantidadCartas(){
+    return $this->cantidad_cartas;
+  }
 }
