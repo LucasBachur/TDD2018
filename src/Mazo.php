@@ -29,4 +29,11 @@ class Mazo {
     if($this->cartas[] = $carta) return TRUE;
     return FALSE;
   }
+  
+  public function obtenerCarta(){
+    if($this->tieneCartas()){
+      return $this->cartas[0];
+    }
+    return FALSE;
+  }
 }
