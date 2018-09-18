@@ -18,6 +18,11 @@ class MazoTest extends TestCase {
         $mazo = new Mazo;
         $this->assertTrue($mazo->mezclar());
     }
+    
+    public function testCortar(){
+        $mazo = new Mazo; //Creo mazo
+        $this->assertTrue($mazo->cortar());
+    }
 
 
 }
