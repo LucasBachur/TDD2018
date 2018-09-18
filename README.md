@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/LucasBachur/TDD2018.svg?branch=master)](https://travis-ci.org/LucasBachur/TDD2018)
 
+**Pablo Antuña y Lucas Bachur**
+
 # Consigna
 
 - Utilizando TDD.
