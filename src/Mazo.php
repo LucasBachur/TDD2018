@@ -39,4 +39,9 @@ class Mazo {
     }
     return FALSE;
   }
+
+  public function obtenerTodasLasCartas(){
+    if($this->tieneCartas()) return $this->cartas;
+    return FALSE;
+  }
 }
