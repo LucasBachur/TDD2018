@@ -9,7 +9,14 @@ class Mazo {
   protected $cartas = array();
   
   public function mezclar() {
-    return TRUE;
+    if(!$this->tieneCartas()) return FALSE;
+    $mis_cartas = $this->obtenerTodasLasCartas();
+    if(shuffle($mis_cartas)){
+      if($this->obtenerTodasLasCartas() == $mis_cartas) return $this->mezclar(); //me aseguro de que el mezclado no sea igual que la posicion original de las cartas
+      $this->cartas = $mis_cartas;
+      return TRUE;
+    }
+    return FALSE;
   }
   
   public function cortar() {
