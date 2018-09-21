@@ -22,25 +22,25 @@ class MazoTest extends TestCase {
     
         $carta1 = new Carta($palo, $numero);
         
-        $this->assertTrue($mazo->agregarCarta($carta));
+        $this->assertTrue($mazo->agregarCarta($carta1));
         $palo = "Basto";
         $numero = "3";
     
         $carta2 = new Carta($palo, $numero);
         
-        $this->assertTrue($mazo->agregarCarta($carta));
+        $this->assertTrue($mazo->agregarCarta($carta2));
         $palo = "Oro";
         $numero = "7";
     
         $carta3 = new Carta($palo, $numero);
         
-        $this->assertTrue($mazo->agregarCarta($carta));
+        $this->assertTrue($mazo->agregarCarta($carta3));
         $palo = "Espada";
         $numero = "8";
     
         $carta4 = new Carta($palo, $numero);
         
-        $this->assertTrue($mazo->agregarCarta($carta));
+        $this->assertTrue($mazo->agregarCarta($carta4));
 
         $array_cartas = array($carta1, $carta2, $carta3, $carta4);
 
