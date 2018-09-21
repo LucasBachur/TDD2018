@@ -46,10 +46,10 @@ class MazoTest extends TestCase {
 
         $array_cartas_mazo = $mazo->obtenerTodasLasCartas();
 
-        $this->assertTrue($array_cartas,$array_cartas_mazo);
+        $this->assertEquals($array_cartas,$array_cartas_mazo);
         $this->assertTrue($mazo->mezclar());
         $array_cartas_mazo = $mazo->obtenerTodasLasCartas();
-        $this->assertFalse($array_cartas,$array_cartas_mazo); //deberían ser distintas ya que las mezclé
+        $this->assertNotEquals($array_cartas,$array_cartas_mazo); //deberían ser distintas ya que las mezclé
     }
     
     public function testCortar(){
