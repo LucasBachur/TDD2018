@@ -24,7 +24,7 @@ class Mazo {
       $mis_cartas = $this->obtenerTodasLasCartas();
 
       
-      $limite = rand(1, $this->obtenerCantidadCartas());
+      $limite = rand(1, $this->obtenerCantidadCartas()-1);
 
       $parte_mazo_1 = array_slice($mis_cartas, 0, $limite);
       $parte_mazo_2 = array_slice($mis_cartas, $limite);
