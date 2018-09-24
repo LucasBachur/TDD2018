@@ -20,7 +20,22 @@ class Mazo {
   }
   
   public function cortar() {
-    return TRUE;
+    if($this->tieneCartas()){
+      $mis_cartas = $this->obtenerTodasLasCartas();
+
+      
+      $limite = rand(1, $this->obtenerCantidadCartas());
+
+      $parte_mazo_1 = array_slice($mis_cartas, 0, $limite);
+      $parte_mazo_2 = array_slice($mis_cartas, $limite);
+
+      $final = array_merge($parte_mazo_2,$parte_mazo_1);
+
+      $this->cartas = $final;
+
+      return TRUE;
+    }
+    return FALSE;
   }
   
   public function obtenerCantidadCartas(){
