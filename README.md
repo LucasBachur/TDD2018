@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/LucasBachur/TDD2018.svg?branch=master)](https://travis-ci.org/LucasBachur/TDD2018)
+﻿[![Build Status](https://travis-ci.org/LucasBachur/TDD2018.svg?branch=master)](https://travis-ci.org/LucasBachur/TDD2018)
+
+[![Coverage Status](https://coveralls.io/repos/github/LucasBachur/TDD2018/badge.svg?branch=master)](https://coveralls.io/github/LucasBachur/TDD2018?branch=master)
 
 **Pablo Antuña y Lucas Bachur**
 
