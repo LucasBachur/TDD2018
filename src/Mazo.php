@@ -22,7 +22,6 @@ class Mazo {
       $this->cartas = $mis_cartas;
       return TRUE;
     }
-    return FALSE;
   }
   
   public function cortar() {

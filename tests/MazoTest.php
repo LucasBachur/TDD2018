@@ -100,10 +100,21 @@ class MazoTest extends TestCase {
         $this->assertNotEquals($array_cartas, $mis_cartas); //deberían ser distintas ya que corté el mazo
     }
 
+    public function testObtenerTodasLasCartasMazovacio(){
+        $mazo = new Mazo;
+        $this->assertFalse($mazo->obtenerTodasLasCartas());
+    }
+
+    public function testCortarMazoVacio(){
+        $mazo = new Mazo;
+        $this->assertFalse($mazo->cortar());
+    }
+
     public function testCantidadCartas(){
         $mazo = new Mazo;
         $this->assertEquals($mazo->obtenerCantidadCartas(), 0);
     }
+
     
     public function testTieneCartas(){
         $mazo = new Mazo;
@@ -132,6 +143,12 @@ class MazoTest extends TestCase {
         
         $this->assertEquals($mazo->obtenerCarta(), $carta);
     }
+
+    public function testObtenerCartaMazoVacio(){
+        $mazo = new Mazo;
+        $this->assertFalse($mazo->obtenerCarta());
+    }
+
     public function testTipoDeMazo(){
         $mazo = new Mazo;
 
