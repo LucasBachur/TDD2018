@@ -7,6 +7,12 @@ class Mazo {
   protected $cantidad_cartas = 0;
   
   protected $cartas = array();
+
+  protected $tipo = NULL;
+
+  public function obtenerTipo(){
+    return $this->tipo;
+  }
   
   public function mezclar() {
     if(!$this->tieneCartas()) return FALSE;
@@ -50,6 +56,7 @@ class Mazo {
   public function agregarCarta($carta){
     if($this->cartas[] = $carta) {
       $this->cantidad_cartas++;
+      if($this->cantidad_cartas = 1) $this->tipo = get_class($carta);
       return TRUE;
     }
     return FALSE;
