@@ -54,7 +54,7 @@ class Mazo {
   }
   
   public function agregarCarta($carta){
-    if($carta->esValido() && get_class($carta)==$this->obtenerTipo()) {
+    if(($carta->esValido() && get_class($carta)==$this->obtenerTipo()) || $this->obtenerTipo()==NULL) {
       $this->cartas[] = $carta;
       $this->cantidad_cartas++;
       if($this->cantidad_cartas == 1) $this->tipo = get_class($carta);
