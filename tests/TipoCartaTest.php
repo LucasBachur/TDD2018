@@ -4,7 +4,7 @@ namespace TDD;
 
 use PHPUnit\Framework\TestCase;
 
-class CartaTest extends TestCase {
+class TipoCartaTest extends TestCase {
   
   public function testEsValido(){
     $palo = "Basto";
