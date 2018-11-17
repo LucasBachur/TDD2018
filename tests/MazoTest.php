@@ -147,4 +147,34 @@ class MazoTest extends TestCase {
 
         $this->assertEquals($mazo->obtenerTipo(),$tipo);
     }
+
+    public function testTipoEspecificoDeMazo(){
+
+        $mazo = new Mazo;
+
+        $palo = "Espada";
+        $numero = "1";
+
+        $carta = new CartaEspanola($palo, $numero);
+        $this->assertTrue($mazo->agregarCarta($carta));
+
+        $palo = "Basto";
+        $numero = "1";
+
+        $carta = new CartaEspanola($palo, $numero);
+        $this->assertTrue($mazo->agregarCarta($carta));
+
+        $palo = "Basto";
+        $numero = "14";
+
+        $carta = new CartaEspanola($palo, $numero);
+        $this->assertFalse($mazo->agregarCarta($carta));
+
+        $palo = "Corazones";
+        $numero = "2";
+
+        $carta = new CartaPoker($palo, $numero);
+        $this->assertFalse($mazo->agregarCarta($carta));
+    
+    }
 }
