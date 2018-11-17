@@ -143,7 +143,7 @@ class MazoTest extends TestCase {
         $carta = new CartaEspanola($palo, $numero);
 
         $mazo->agregarCarta($carta);
-        $tipo = "CartaEspanola";
+        $tipo = get_class($carta);
 
         $this->assertEquals($mazo->obtenerTipo(),$tipo);
     }
