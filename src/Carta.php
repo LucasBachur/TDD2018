@@ -8,20 +8,20 @@ class Carta {
   
   protected $numero;
   
-  public function __construct($palo, $numero){
+  public function __construct($palo, $numero) {
     $this->palo = $palo;
     $this->numero = $numero;    
   }
   
-  public function obtenerPalo(){
+  public function obtenerPalo() {
     return $this->palo;
   }
   
-  public function obtenerNumero(){
+  public function obtenerNumero() {
     return $this->numero;
   }
 
-  public function esValido(){
+  public function esValido() {
     return TRUE;
   }
   

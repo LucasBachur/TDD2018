@@ -6,35 +6,35 @@ class Mazo {
 
   protected $cantidad_cartas = 0;
   
-  protected $cartas = array();
+  protected $cartas = array ();
 
   protected $tipo = NULL;
 
-  public function obtenerTipo(){
+  public function obtenerTipo() {
     return $this->tipo;
   }
   
   public function mezclar() {
-    if(!$this->tieneCartas()) return FALSE;
+    if (!$this->tieneCartas()) return FALSE;
     $mis_cartas = $this->obtenerTodasLasCartas();
-    if(shuffle($mis_cartas)){
-      if($this->obtenerTodasLasCartas() == $mis_cartas) return $this->mezclar(); //me aseguro de que el mezclado no sea igual que la posicion original de las cartas
+    if (shuffle($mis_cartas)) {
+      if ($this->obtenerTodasLasCartas() == $mis_cartas) return $this->mezclar(); //me aseguro de que el mezclado no sea igual que la posicion original de las cartas
       $this->cartas = $mis_cartas;
       return TRUE;
     }
   }
   
   public function cortar() {
-    if($this->tieneCartas()){
+    if ($this->tieneCartas()) {
       $mis_cartas = $this->obtenerTodasLasCartas();
 
       
-      $limite = rand(1, $this->obtenerCantidadCartas()-1);
+      $limite = rand(1, $this->obtenerCantidadCartas() - 1);
 
       $parte_mazo_1 = array_slice($mis_cartas, 0, $limite);
       $parte_mazo_2 = array_slice($mis_cartas, $limite);
 
-      $final = array_merge($parte_mazo_2,$parte_mazo_1);
+      $final = array_merge($parte_mazo_2, $parte_mazo_1);
 
       $this->cartas = $final;
 
@@ -43,34 +43,34 @@ class Mazo {
     return FALSE;
   }
   
-  public function obtenerCantidadCartas(){
+  public function obtenerCantidadCartas() {
     return $this->cantidad_cartas;
   }
   
-  public function tieneCartas(){
-    if($this->obtenerCantidadCartas() == 0) return FALSE;
+  public function tieneCartas() {
+    if ($this->obtenerCantidadCartas() == 0) return FALSE;
     return TRUE;
   }
   
-  public function agregarCarta($carta){
-    if(($carta->esValido() && get_class($carta)==$this->obtenerTipo()) || $this->obtenerTipo()==NULL) {
+  public function agregarCarta($carta) {
+    if (($carta->esValido() && get_class($carta) == $this->obtenerTipo()) || $this->obtenerTipo() == NULL) {
       $this->cartas[] = $carta;
       $this->cantidad_cartas++;
-      if($this->cantidad_cartas == 1) $this->tipo = get_class($carta);
+      if ($this->cantidad_cartas == 1) $this->tipo = get_class($carta);
       return TRUE;
     }
     return FALSE;
   }
   
-  public function obtenerCarta(){
-    if($this->tieneCartas()){
+  public function obtenerCarta() {
+    if ($this->tieneCartas()) {
       return $this->cartas[0];
     }
     return FALSE;
   }
 
-  public function obtenerTodasLasCartas(){
-    if($this->tieneCartas()) return $this->cartas;
+  public function obtenerTodasLasCartas() {
+    if ($this->tieneCartas()) return $this->cartas;
     return FALSE;
   }
 }
