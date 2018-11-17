@@ -2,6 +2,8 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/LucasBachur/TDD2018/badge.svg?branch=master)](https://coveralls.io/github/LucasBachur/TDD2018?branch=master)
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/LucasBachur/TDD2018/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/LucasBachur/TDD2018/?branch=master)
+
 **Pablo Antuña y Lucas Bachur**
 
 # Consigna
