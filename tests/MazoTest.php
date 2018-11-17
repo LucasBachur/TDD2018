@@ -11,7 +11,7 @@ class MazoTest extends TestCase {
      */
     public function testExiste() {
         $mazo = new Mazo;
-        
+
         $this->assertTrue(isset($mazo));
     }
 
@@ -131,5 +131,20 @@ class MazoTest extends TestCase {
         $mazo->agregarCarta($carta);
         
         $this->assertEquals($mazo->obtenerCarta(), $carta);
+    }
+    public function testTipoDeMazo(){
+        $mazo = new Mazo;
+
+        $this->assertEquals($mazo->obtenerTipo(), NULL);
+
+        $palo = "Espada";
+        $numero = "1";
+    
+        $carta = new CartaEspanola($palo, $numero);
+
+        $mazo->agregarCarta($carta);
+        $tipo = "CartaEspanola";
+
+        $this->assertEquals($mazo->obtenerTipo(),$tipo);
     }
 }
