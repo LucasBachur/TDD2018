@@ -20,5 +20,9 @@ class Carta {
   public function obtenerNumero(){
     return $this->numero;
   }
+
+  public function esValido(){
+    return TRUE;
+  }
   
 }
