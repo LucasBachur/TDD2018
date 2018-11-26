@@ -5,7 +5,9 @@ namespace TDD;
 use PHPUnit\Framework\TestCase;
 
 class TipoCartaTest extends TestCase {
-  
+  /**
+   * Test que prueba el correcto funcionamiento del metodo que comprueba la validez de la carta
+   */
   public function testEsValido(){
     $palo = "Basto";
     $numero = "7";
