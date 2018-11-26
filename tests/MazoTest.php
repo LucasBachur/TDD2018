@@ -15,6 +15,9 @@ class MazoTest extends TestCase {
         $this->assertTrue(isset($mazo));
     }
 
+    /**
+     * Es un test que prueba que se puede mezclar un mazo de cartas devolviendo un mazo distinto al original (en otro orden)
+     */
     public function testMezclable() {
         $mazo = new Mazo;
         $palo = "Espada";
@@ -52,6 +55,9 @@ class MazoTest extends TestCase {
         $this->assertNotEquals($array_cartas,$array_cartas_mazo); //deberían ser distintas ya que las mezclé
     }
     
+    /**
+     * Es un test que prueba que se puede cortar un mazo probando que el mazo original es distinto al mazo devuelto
+     */
     public function testCortar(){
         $mazo = new Mazo; //Creo mazo
 
@@ -100,27 +106,42 @@ class MazoTest extends TestCase {
         $this->assertNotEquals($array_cartas, $mis_cartas); //deberían ser distintas ya que corté el mazo
     }
 
+    /**
+     * Un test que prueba que si el mazo está vacio no devuelve cartas
+     */
     public function testObtenerTodasLasCartasMazovacio(){
         $mazo = new Mazo;
         $this->assertFalse($mazo->obtenerTodasLasCartas());
     }
 
+    /**
+     * Un test que prueba que si el mazo está vacio no puede cortar el mazo
+     */
     public function testCortarMazoVacio(){
         $mazo = new Mazo;
         $this->assertFalse($mazo->cortar());
     }
 
+
+    /**
+     * Un test que prueba que la cantidad de cartas devuelta por el metodo de obtenerCantidadCartas sea correcta
+     */
     public function testCantidadCartas(){
         $mazo = new Mazo;
         $this->assertEquals($mazo->obtenerCantidadCartas(), 0);
     }
 
-    
+    /**
+     * Un test que prueba que el metodo tieneCartas devuelva la salida correcta
+     */
     public function testTieneCartas(){
         $mazo = new Mazo;
         $this->assertFalse($mazo->tieneCartas());
     }
     
+    /**
+     * Un test que prueba que se puede agregar una carta a un mazo
+     */
     public function testAgregarCarta(){
         $mazo = new Mazo;
         
@@ -132,6 +153,10 @@ class MazoTest extends TestCase {
         $this->assertTrue($mazo->agregarCarta($carta));
     }
     
+
+    /**
+     * Un test que prueba que se puede obtener la ultima carta agregada al mazo
+     */
     public function testObtenerCarta(){
         $mazo = new Mazo;
         
@@ -144,11 +169,17 @@ class MazoTest extends TestCase {
         $this->assertEquals($mazo->obtenerCarta(), $carta);
     }
 
+    /**
+     * Un test que prueba que si el mazo está vacio no devuelve la ultima carta
+     */
     public function testObtenerCartaMazoVacio(){
         $mazo = new Mazo;
         $this->assertFalse($mazo->obtenerCarta());
     }
 
+    /**
+     * Un test que prueba que el tipo de mazo devuelto es el correcto
+     */
     public function testTipoDeMazo(){
         $mazo = new Mazo;
 
@@ -165,6 +196,9 @@ class MazoTest extends TestCase {
         $this->assertEquals($mazo->obtenerTipo(),$tipo);
     }
 
+    /**
+     * Test que prueba que si tenes mazo de un tipo no te deja agregar cartas de otro tipo o no validas
+     */
     public function testTipoEspecificoDeMazo(){
 
         $mazo = new Mazo;
